@@ -1,2 +1,2 @@
 #!/bin/bash 
-find . -mindepth 1 *.js | rm -r  
+find . -mindepth 1 *.js | rm *  
