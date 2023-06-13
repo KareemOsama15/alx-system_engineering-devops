@@ -1,2 +1,2 @@
-#!/bin/baSH
-rev 
+#!/bin/bash
+sort -r 
