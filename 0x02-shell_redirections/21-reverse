@@ -1,2 +1,2 @@
 #!/bin/baSH
-sort -r 
+rev 
