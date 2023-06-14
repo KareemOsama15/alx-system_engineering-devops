@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $(( $((water# $WAter)) + $((stir# $STIR)) ))
