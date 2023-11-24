@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+
+# -ge =>greater than or equal
+# -gt =>greater than
+# -lt =>less than
+# -le =>less than or equal
+# -eq => equal
+# -ne => not equal
+# -z => variable is empty
+# -n => variable is not empty
+# -d => directory exists
+# -f => file exists
+# -w => write permission
+# -r => read permission
+# -x => execute permission
+# == -> each value must equal each others
+# != -> each value must not equal each others
+# ! => not operator means value is false
+# && => and means both value in operator sides must be true then execute
+# || => and means one value in operator sides at least must be true then execute
+
+
+
+
+############
+# In While codition is true and still looping untill condition being false
+
+# num=1
+# while [ $num -lt 10 ]
+# do
+#     echo "$num"
+#     num=$(( num + 1 ))
+# done
+############
+# In Until codition is false and still working until condition being true then stop
+
+# num=1
+# until [ $num -gt 9 ]
+# do
+#     echo "$num"
+#     num=$(( num + 1 ))
+# done
+############
+# For Loop
+
+# for (( i=0 ; i<5 ; i++ ))
+# do
+#     echo $i
+# done
+
+# for i in {0..6..2}
+# do
+#     echo $i
+# done
+################
+# if.. else condition
+
+# if [[ -z $1 ]]; then
+#     echo "Error: Name is empty"
+# else
+#     echo "Hi, $1"
+# fi
+
+# i=150
+# if [[ $i -gt 100 ]]; then
+#     echo "$i is greater than 100"
+# else
+#     echo "$i is less than 100"
+# fi
+
+# if [[ $1 =~ ^https ]]; then
+#     echo "Yes"
+# else
+#     echo "No"
+# fi
+
+# Check if at least one command line argument is provided
+# if [ "$#" -lt 1 ]; then
+#     echo "Usage: $0 <filename>"
+#     exit 1
+# fi
+
+# file=$1
+# if [[ -f $file ]]; then
+#     echo 'File exists'
+# else
+#     echo 'File not found'
+# fi
+
+# if [[ $1 == "kareem" && $2 -eq 25 ]]; then
+#     echo 'Hello kareem, Your age is 25'
+# else
+#     echo 'Try again'
+# fi
+
+[[ $1 == "kareem" ]] && echo 'hello, kareem' || echo 'must kareem'
