@@ -56,4 +56,5 @@ Host *
     HashKnownHosts yes
     GSSAPIAuthentication yes
 ",
+    mode    => '0644',
 }
