@@ -1,6 +1,6 @@
 # make changes to our configuration file using Puppet
 file { '/etc/.ssh/ssh_config':
-    ensure  => file,
+    ensure  => 'present',
     content => "# This is the ssh client system-wide configuration file.  See
 # ssh_config(5) for more information.  This file provides defaults for
 # users, and the values can be changed in per-user configuration files
