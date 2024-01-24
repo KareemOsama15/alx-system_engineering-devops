@@ -4,5 +4,5 @@ sudo apt-get update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo echo 'Hello World!' >  /var/www/html/index.nginx-debian.html
-sudo sed -i "/location \/ {/a \\\tlocation \/redirect_me {\n\t\treturn 301 https://intranet.alxswe.com/projects/266l;\n\t}" /etc/nginx/sites-available/default
+sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https://intranet.alxswe.com/projects/266l permanent;}" /etc/nginx/sites-available/default
 sudo service nginx start
