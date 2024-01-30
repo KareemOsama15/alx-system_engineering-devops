@@ -1,3 +1,5 @@
+# Add a custom HTTP header with Puppet
+
 exec { 'update packages':
     provider => shell,
     command  => 'sudo apt-get update',
