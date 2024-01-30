@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# script configures web-02 to be identical to web-01
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo ufw allow "Nginx HTTP"
+echo "Hello World!" | sudo tee /var/www/html/index.html
+sudo mkdir -p /var/www/kareemsaleh.tech/html
+sudo echo -e "Ceci n'est pas une page\n" | sudo tee /var/www/kareemsaleh.tech/html/custom_404.html > /dev/null
+sudo sed -i '/^[^#]*server_name.*;$/a \ \n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/intranet.alxswe.com\/projects\/266l;\n\t}' /etc/nginx/sites-available/default
+sudo sed -i '/^[^#]*server_name.*;$/a \ \n\terror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\t\tinternal;\n\t\troot /var/www/kareemsaleh.tech/html;\n\t}' /etc/nginx/sites-available/default
+sudo sed -i '/^server {/a \ \tadd_header X-Served-By \$hostname;' /etc/nginx/sites-available/default
+sudo service nginx restart
