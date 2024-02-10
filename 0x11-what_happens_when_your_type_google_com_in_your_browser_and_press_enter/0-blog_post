@@ -1,0 +1,25 @@
+What happens when you type google.com in your browser and press Enter?
+
+DNS Request:
+    the browser initiates a Domain Name System (DNS) lookup to translate the human-readable domain name "www.google.com" into an IP address. This involves querying DNS servers to find the IP address associated with the domain name.
+
+TCP/IP:
+    Once the IP address is resolved, the browser establishes a Transmission Control Protocol (TCP) connection with the server at that IP address using the Internet Protocol (IP). TCP ensures reliable and ordered delivery of data between the client (browser) and the server.
+
+Firewall:
+    The TCP connection passes through any firewalls or network security measures configured on your local network or the server's network. Firewalls may filter or block certain types of traffic based on predefined rules.
+
+HTTPS/SSL:
+    If the website uses HTTPS (Hypertext Transfer Protocol Secure), a secure connection is established between your browser and the server. This involves an SSL/TLS handshake, where the server presents its SSL certificate to your browser to verify its authenticity and establish an encrypted connection.
+
+Load-Balancer:
+    In some cases, especially for large-scale websites like Google, the request may be routed through a load balancer. The load balancer distributes incoming traffic across multiple servers (such as web servers or application servers) to ensure optimal performance and reliability.
+
+Web Server:
+    The request reaches one of Google's web servers. These servers host the website's static content (such as HTML, CSS, and JavaScript files) and handle initial processing of the request.
+
+Application Server:
+    For dynamic content or user-specific interactions, the request may be forwarded to an application server. This server executes server-side code (e.g., Python, Ruby, Java) to generate dynamic content or interact with databases.
+
+Database:
+    If the request involves fetching or updating data from a database (such as user information or search results), the application server communicates with the database server to retrieve or modify the required data.
