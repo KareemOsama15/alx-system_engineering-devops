@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     users_response = requests.get('{}users?id={}'.format(url, emp_id))
     emp_json = users_response.json()
-    emp_name = emp_json.get('username')
+    emp_name = emp_json[0].get('username')
 
     todos_response = requests.get('{}/todos?userId={}'.format(url, emp_id))
     todos_json = todos_response.json()

@@ -3,8 +3,8 @@
 script that, using this REST API, for a given employee ID,
 returns information about his/her TODO list progress.
 """
-import sys
 import requests
+import sys
 
 
 if __name__ == "__main__":
@@ -13,7 +13,8 @@ if __name__ == "__main__":
 
     users_response = requests.get('{}users?id={}'.format(url, emp_id))
     emp_json = users_response.json()
-    print("Employee {} is done with tasks".format(emp_json.get("name")), end='')
+    print("Employee {} is done with tasks".format(emp_json[0].get("name")),
+          end='')
 
     todos_response = requests.get('{}/todos?userId={}'.format(url, emp_id))
     todos_json = todos_response.json()
