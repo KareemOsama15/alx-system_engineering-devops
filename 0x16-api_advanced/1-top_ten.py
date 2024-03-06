@@ -16,7 +16,7 @@ def top_ten(subreddit):
     #     'limit': 10
     # }
     response = requests.get(url,
-                            headers=headers, 
+                            headers=headers,
                             # params=params,
                             allow_redirects=False)
 

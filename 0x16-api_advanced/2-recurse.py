@@ -15,7 +15,7 @@ def recurse(subreddit, hot_list=[], after=None):
         "User-Agent": "user-agent"
     }
     response = requests.get(url,
-                            headers=headers, 
+                            headers=headers,
                             allow_redirects=False)
 
     if response.status_code != 200:
